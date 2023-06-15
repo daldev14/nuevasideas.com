@@ -1,81 +1,157 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="Nuevas Ideas">
+	<main class="grid place-content-center min-h-screen bg-[#00adef]">
+		<section class="flex flex-col items-center gap-10">
+			<div class="flex flex-col items-center gap-10">
+				<h1>
+					<svg
+						width="356"
+						height="180"
+						viewBox="0 0 356 180"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g filter="url(#filter0_d_7_2)">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M43.7686 66H61.083V1.75195H48.8223V32.1621L48.998 38.0508L49.2617 43.9395C49.3496 45.9023 49.4229 47.8799 49.4814 49.8721H49.1738L21.2686 1.75195H4.08594V66H16.2588V35.7656C16.1709 33.7148 16.083 31.6787 15.9951 29.6572L15.7314 23.5049C15.6436 21.4541 15.541 19.418 15.4238 17.3965H15.8193L43.7686 66ZM128.694 43.3242V1.75195H115.115V40.9951C115.115 44.3057 114.675 47.0303 113.796 49.1689C112.917 51.3076 111.54 52.8896 109.665 53.915C107.82 54.9404 105.403 55.4531 102.414 55.4531C98.1664 55.4531 94.9584 54.3838 92.7904 52.2451C90.6225 50.1064 89.5385 46.3857 89.5385 41.083V1.75195H75.9594V43.1484C75.9594 50.2969 78.1859 56.0391 82.6391 60.375C87.0922 64.7109 93.5668 66.8789 102.063 66.8789C108.039 66.8789 112.991 65.8389 116.916 63.7588C120.871 61.6787 123.816 58.8662 125.749 55.3213C127.712 51.7471 128.694 47.748 128.694 43.3242ZM143.526 66H180.528V54.75H157.149V38.1826H178.902V27.0205H157.149V12.9141H180.528V1.75195H143.526V66ZM221.64 66L243.481 1.75195H229.726L217.553 39.9844C217.348 40.6582 217.011 41.8887 216.542 43.6758C216.103 45.4336 215.649 47.2939 215.18 49.2568C214.74 51.2197 214.433 52.8457 214.257 54.1348C214.081 52.8457 213.744 51.2197 213.246 49.2568C212.778 47.2646 212.309 45.3896 211.84 43.6318C211.371 41.8447 211.034 40.6289 210.829 39.9844L198.744 1.75195H184.989L206.786 66H221.64ZM285.383 50.707L290.042 66H304.719L281.956 1.48828H265.3L242.625 66H257.302L261.961 50.707H285.383ZM277.473 24.3398L282.131 39.2812H265.388L270.003 24.3398C270.208 23.666 270.545 22.5381 271.013 20.9561C271.482 19.374 271.965 17.7041 272.463 15.9463C272.991 14.1592 273.401 12.665 273.694 11.4639C273.987 12.665 274.368 14.0859 274.837 15.7266C275.335 17.3379 275.818 18.9346 276.287 20.5166C276.785 22.0693 277.18 23.3438 277.473 24.3398ZM347.105 58.0898C348.951 55.2773 349.874 51.9668 349.874 48.1582C349.874 44.7891 349.244 41.9766 347.984 39.7207C346.725 37.4355 344.923 35.458 342.579 33.7881C340.265 32.0889 337.467 30.4629 334.186 28.9102C331.49 27.6211 329.234 26.4932 327.418 25.5264C325.631 24.5596 324.283 23.5635 323.375 22.5381C322.496 21.4834 322.057 20.1943 322.057 18.6709C322.057 17.3818 322.364 16.2539 322.979 15.2871C323.595 14.291 324.503 13.5293 325.704 13.002C326.905 12.4453 328.355 12.167 330.055 12.167C332.486 12.167 334.874 12.5039 337.218 13.1777C339.562 13.8223 342.213 14.7451 345.172 15.9463L349.566 5.35547C346.256 3.89062 343.077 2.77734 340.03 2.01562C337.013 1.22461 333.834 0.829102 330.494 0.829102C326.041 0.829102 322.174 1.56152 318.893 3.02637C315.641 4.46191 313.136 6.54199 311.378 9.2666C309.62 11.9912 308.741 15.2725 308.741 19.1104C308.741 22.04 309.239 24.5596 310.235 26.6689C311.261 28.749 312.564 30.5215 314.146 31.9863C315.729 33.4512 317.398 34.6963 319.156 35.7217C320.914 36.7178 322.54 37.5674 324.034 38.2705C326.407 39.4131 328.531 40.4824 330.406 41.4785C332.311 42.4746 333.805 43.5439 334.889 44.6865C335.973 45.8291 336.515 47.2061 336.515 48.8174C336.515 50.1357 336.207 51.3076 335.592 52.333C334.977 53.3584 333.98 54.1641 332.604 54.75C331.256 55.3359 329.469 55.6289 327.242 55.6289C324.02 55.6289 320.768 55.0869 317.486 54.0029C314.205 52.9189 311.041 51.7031 307.994 50.3555V63.0117C309.752 63.8613 311.598 64.5791 313.531 65.165C315.494 65.7217 317.53 66.1465 319.64 66.4395C321.778 66.7324 323.961 66.8789 326.188 66.8789C331.227 66.8789 335.504 66.1172 339.02 64.5938C342.564 63.0703 345.26 60.9023 347.105 58.0898ZM5.5 78.625V170H24.875V78.625H5.5ZM116.47 149.25C120.428 142.333 122.408 133.729 122.408 123.438C122.408 113.646 120.47 105.438 116.595 98.8125C112.72 92.1458 107.262 87.125 100.22 83.75C93.1783 80.3333 84.8658 78.625 75.2825 78.625H46.595V170H72.47C82.97 170 91.9492 168.271 99.4075 164.812C106.866 161.312 112.553 156.125 116.47 149.25ZM99.2825 107.312C101.283 111.646 102.283 117.188 102.283 123.938C102.283 133.896 99.97 141.396 95.345 146.438C90.7617 151.479 83.7408 154 74.2825 154H65.97V94.5H76.2825C81.9492 94.5 86.6992 95.5417 90.5325 97.625C94.4075 99.7083 97.3242 102.938 99.2825 107.312ZM140.065 170H192.69V154H159.44V130.438H190.378V114.562H159.44V94.5H192.69V78.625H140.065V170ZM259.848 148.25L266.473 170H287.348L254.973 78.25H231.285L199.035 170H219.91L226.535 148.25H259.848ZM248.598 110.75L255.223 132H231.41L237.973 110.75C238.264 109.792 238.743 108.188 239.41 105.938C240.077 103.688 240.764 101.312 241.473 98.8125C242.223 96.2708 242.806 94.1458 243.223 92.4375C243.639 94.1458 244.181 96.1667 244.848 98.5C245.556 100.792 246.243 103.062 246.91 105.312C247.618 107.521 248.181 109.333 248.598 110.75ZM347.63 158.75C350.255 154.75 351.568 150.042 351.568 144.625C351.568 139.833 350.672 135.833 348.88 132.625C347.088 129.375 344.526 126.562 341.193 124.188C337.901 121.771 333.922 119.458 329.255 117.25C325.422 115.417 322.213 113.812 319.63 112.438C317.088 111.062 315.172 109.646 313.88 108.188C312.63 106.688 312.005 104.854 312.005 102.688C312.005 100.854 312.443 99.25 313.318 97.875C314.193 96.4583 315.484 95.375 317.193 94.625C318.901 93.8333 320.963 93.4375 323.38 93.4375C326.838 93.4375 330.234 93.9167 333.568 94.875C336.901 95.7917 340.672 97.1042 344.88 98.8125L351.13 83.75C346.422 81.6667 341.901 80.0833 337.568 79C333.276 77.875 328.755 77.3125 324.005 77.3125C317.672 77.3125 312.172 78.3542 307.505 80.4375C302.88 82.4792 299.318 85.4375 296.818 89.3125C294.318 93.1875 293.068 97.8542 293.068 103.312C293.068 107.479 293.776 111.062 295.193 114.062C296.651 117.021 298.505 119.542 300.755 121.625C303.005 123.708 305.38 125.479 307.88 126.938C310.38 128.354 312.693 129.562 314.818 130.562C318.193 132.188 321.213 133.708 323.88 135.125C326.588 136.542 328.713 138.062 330.255 139.688C331.797 141.312 332.568 143.271 332.568 145.562C332.568 147.438 332.13 149.104 331.255 150.562C330.38 152.021 328.963 153.167 327.005 154C325.088 154.833 322.547 155.25 319.38 155.25C314.797 155.25 310.172 154.479 305.505 152.938C300.838 151.396 296.338 149.667 292.005 147.75V165.75C294.505 166.958 297.13 167.979 299.88 168.812C302.672 169.604 305.568 170.208 308.568 170.625C311.609 171.042 314.713 171.25 317.88 171.25C325.047 171.25 331.13 170.167 336.13 168C341.172 165.833 345.005 162.75 347.63 158.75Z"
+								fill="white"></path>
+						</g>
+						<defs>
+							<filter
+								id="filter0_d_7_2"
+								x="0.0859375"
+								y="0.829102"
+								width="355.482"
+								height="178.421"
+								filterUnits="userSpaceOnUse"
+								color-interpolation-filters="sRGB"
+							>
+								<feFlood
+									flood-opacity="0"
+									result="BackgroundImageFix"></feFlood>
+								<feColorMatrix
+									in="SourceAlpha"
+									type="matrix"
+									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+									result="hardAlpha"></feColorMatrix>
+								<feOffset dy="4"></feOffset>
+								<feGaussianBlur stdDeviation="2"
+								></feGaussianBlur>
+								<feComposite in2="hardAlpha" operator="out"
+								></feComposite>
+								<feColorMatrix
+									type="matrix"
+									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+								></feColorMatrix>
+								<feBlend
+									mode="normal"
+									in2="BackgroundImageFix"
+									result="effect1_dropShadow_7_2"></feBlend>
+								<feBlend
+									mode="normal"
+									in="SourceGraphic"
+									in2="effect1_dropShadow_7_2"
+									result="shape"></feBlend>
+							</filter>
+						</defs>
+					</svg>
+					<span class="sr-only">Nuevas Ideas</span>
+				</h1>
+				<a
+					href="https://www.cognitoforms.com/login?returnUrl=https%3A%2F%2Fwww.cognitoforms.com%2Fandrespohl1%2Festeesuntest&requiredOrganization=Andres%20Pohl&code=AndresPohl1"
+					class="px-6 py-2 font-medium tracking-wide text-white capitalize border-2 transition-all duration-300 transform bg-transparen rounded-lg hover:bg-white/30 hover:shadow-lg hover:scale-105 focus:outline-none"
+				>
+					Login
+				</a>
+			</div>
+			<ul class="flex items-center gap-6">
+				<li>
+					<a
+						href="https://facebook.com/nuevasideasparanuevostiempos"
+						class="inline-block rounded-full border p-2 bg-white/30 text-white hover:bg-white/50 transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none"
+					>
+						<span class="sr-only">Facebook</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-facebook"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path>
+							<path
+								d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+							></path>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://twitter.com/nuevasideas"
+						class="inline-block rounded-full border p-2 bg-white/30 text-white hover:bg-white/50 transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none"
+					>
+						<span class="sr-only">Twitter</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-twitter"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path>
+							<path
+								d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"
+							></path>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.instagram.com/nuevasideascom/"
+						class="inline-block rounded-full border p-2 bg-white/30 text-white hover:bg-white/50 transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none"
+					>
+						<span class="sr-only">Instagram</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-brand-instagram"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path>
+							<path
+								d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+							></path>
+							<path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+							></path>
+							<path d="M16.5 7.5l0 .01"></path>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</section>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
