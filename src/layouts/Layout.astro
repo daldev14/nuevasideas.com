@@ -11,9 +11,33 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Nuevas Ideas" />
+		<meta name="author" content="Grupo ASICA - Daniel Amaya" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="apple-mobile-web-app-title" content="Nuevas Ideas" />
+		<meta name="application-name" content="Nuevas Ideas" />
+		<meta name="msapplication-TileColor" content="#00adef" />
+		<meta name="theme-color" content="#00adef" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="00adef" />
 		<title>{title}</title>
 	</head>
 	<body>
